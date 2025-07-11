@@ -1,35 +1,62 @@
-# Command line BlackJack using Python:
-## Single player game against computer.
+# Blackjack
+- A terminal-based Blackjack game built in Python.
+- Play against a computer dealer with a betting system, card score logic, and simple visuals.
+- Includes basic card drawing with suits and handles Blackjack rules such as ace adjustments and dealer hitting below 17.
 
-- A small demo:
+## Features
+- Visual ASCII logo
+- Simulated card drawing with suits
+- Full Blackjack rules including ace value adjustment
+- Dealer logic that hits until reaching 17 or more
+- Betting system with persistent balance
+- Game ends when balance reaches zero or user quits
+
+## Tech Stack
+- Python 3.X
+- Standard libraries: `random`
+
+## How to Play
+1. Start with $1000.
+2. Place a bet before each round.
+3. Draw cards and decide whether to hit or stand.
+4. Try to beat the dealer without going over 21.
+5. Game continues until you choose to quit or run out of money.
+
+## Setup and Installation
+### 1. Clone the repository:
 ```bash
+git clone https://github.com/rampalliprakhar/Blackjack.git
+cd blackjack
+```
 
-.------.            _     _            _    _            _    
-|A_  _ |.          | |   | |          | |  (_)          | |   
-|( \/ ).-----.     | |__ | | __ _  ___| | ___  __ _  ___| | __
-| \  /|K /\  |     | '_ \| |/ _` |/ __| |/ / |/ _` |/ __| |/ /
-|  \/ | /  \ |     | |_) | | (_| | (__|   <| | (_| | (__|   < 
-`-----| \  / |     |_.__/|_|\__,_|\___|_|\_\ |\__,_|\___|_|\_\\
-      |  \/ K|                            _/ |
-      `------'                           |__/
+### 2. Run the program:
+```bash
+python main.py
+```
 
+### 3. Sample Gameplay
+```bash
 Welcome to Blackjack!
-You have $1000. How much would you like to bet? 500
 
-Your bet: $500
-Your's hand: 4♣, 8♦
-Computer's hand: 8♠ and a hidden card
-Your current score: 12
+You have $1000. How much would you like to bet? 200
+
+Your bet: $200
+Your hand: 9♠, 7♦
+Computer's hand: Q♣ and a hidden card
+Your current score: 16
+
 Type 'y' to get another card, type 'n' to pass: y
-Your's hand: 4♣, 8♦, 6♥
-Computer's hand: 8♠ and a hidden card
-Your current score: 18
-Type 'y' to get another card, type 'n' to pass: n
-Your's hand: 4♣, 8♦, 6♥
-Computer's hand: 8♠, 9♣
-You win!
-Your new balance is $1500.
-Do you want to play again? Type 'y' for Yes or 'n' for No: n
-Thanks for playing!
+Your hand: 9♠, 7♦, 5♥
+Your current score: 21
 
+Computer's hand: Q♣, 6♦, 7♠
+Opponent went over. You win!
+Your new balance is $1200
+```
+
+### 4. Project Structure
+```bash
+blackjack/
+├── art.py         # Contains ASCII art logo
+└── main.py        # Main game logic
 ```
